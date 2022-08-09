@@ -15,7 +15,7 @@
           <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
           Password
           </span>
-          <input type="password" name="password" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="•••••••••••••••••••" v-model="password" />
+          <input type="password" name="password" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1" placeholder="•••••••••••••••••••" v-model="password" @keyup.enter="login" />
         </label>
     </div>
 <div class="pl-10 pr-10 pb-10 pt-2">
@@ -45,8 +45,12 @@ export default {
             this.$store.commit('user/authenticated', true)
             this.$store.dispatch('user/loginUser',  {idToken})
 
-            console.log(this.$store.state.currentUser)
-            console.log(this.$store.state.authorized)
+            if (this.$store.state.authorized) {
+                this.$router.push('people')
+            }
+
+            //console.log(this.$store.state.currentUser)
+            //console.log(this.$store.state.authorized)
         } catch (e) {
           alert(e)
           console.log(e)

@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col space-y-4">
-         <LoginForm/> 
+     This is the Index Page.
     </div>
 </template>
 
@@ -8,6 +8,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  middleware: ['authenticated'],
   name: 'IndexPage'
 })
 </script>
