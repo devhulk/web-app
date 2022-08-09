@@ -17,18 +17,19 @@ export const state = () => ({
   export const mutations = {
     // mutations change state, and must be syncronous 
     toggleAuthStatus(state) {
-      state.authorized = !state.authorized
+      this.state.authorized = !state.authorized
     },
 
     setCurrentUser(state, user) {
-      state.currentUser = user
+      this.state.currentUser = user
     }
   }
   
   export const actions = {
     // actions are for api calls, actions execute mutations
-    async loginUser(state) {
+    async loginUser(state, payload) {
       // make request
+        this.commit('user/setCurrentUser', payload.idToken)
         
     },
 

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/home/gerald/youauto-project/web-app/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_07ed99e7"
+  },
+  {
+    "name": "people",
+    "path": "/people",
+    "component": "/home/gerald/youauto-project/web-app/pages/people.vue",
+    "chunkName": "pages/people",
+    "_name": "_a5de83fe"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/gerald/youauto-project/web-app/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3e45f6d0"
+  }
+]

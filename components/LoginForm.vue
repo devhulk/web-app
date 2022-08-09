@@ -40,8 +40,13 @@ export default {
         try {
           await this.$fire.auth.signInWithEmailAndPassword(this.email, this.password)
           //console.log(await this.$fire.auth)
-        console.log(this.$fire.auth)
-        console.log(this.$auth)
+            console.log(this.$fire.auth)
+            let idToken = await this.$fire.auth.currentUser.getIdToken()
+            console.log()
+            console.log(this.$auth)
+            this.$store.dispatch('user/loginUser',  {idToken})
+
+            console.log(this.$store.state.currentUser)
         } catch (e) {
           alert(e)
           console.log(e)
