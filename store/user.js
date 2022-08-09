@@ -20,6 +20,10 @@ export const state = () => ({
       this.state.authorized = !state.authorized
     },
 
+    authenticated(state, val) {
+      this.state.authorized = val
+    },
+
     setCurrentUser(state, user) {
       this.state.currentUser = user
     }

@@ -42,11 +42,11 @@ export default {
           //console.log(await this.$fire.auth)
             console.log(this.$fire.auth)
             let idToken = await this.$fire.auth.currentUser.getIdToken()
-            console.log()
-            console.log(this.$auth)
+            this.$store.commit('user/authenticated', true)
             this.$store.dispatch('user/loginUser',  {idToken})
 
             console.log(this.$store.state.currentUser)
+            console.log(this.$store.state.authorized)
         } catch (e) {
           alert(e)
           console.log(e)
