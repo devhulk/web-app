@@ -24,11 +24,6 @@
         var user = result.user
         console.log(user)
 
-        //Redirect method
-        // const redr = await this.$firebase.auth().signInWithRedirect(provider)
-        // console.log(redr)
-        
-
       }
     }
   }

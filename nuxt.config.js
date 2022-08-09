@@ -61,6 +61,10 @@ export default {
       }
     ]
   ],
+ 
+    auth: {
+        plugins: ['~/plugins/firebase.js']
+    },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -73,6 +77,9 @@ export default {
     vaultToken: process.env.VAULT_TOKEN,
     googleAuthKey: process.env.GOOGLE_AUTH_KEY,
     googleAuthDomain: process.env.GOOGLE_AUTH_DOMAIN,
+    projectId: "rehicle",
+    storageBucket: "rehicle.appspot.com",
+    appId:"1:675107999277:web:18cb7546b037b92883b2a4"
 
   },
 

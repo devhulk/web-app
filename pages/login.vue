@@ -11,7 +11,7 @@ export default Vue.extend({
   name: 'IndexPage',
     computed: {
     appraisals () {
-      return this.$store.state.appraisals.list
+      return this.$store.state.people.list
     }
   },
 })
